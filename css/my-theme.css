@@ -1,0 +1,260 @@
+/*body {
+    position: absolute;
+    left: 0;} */
+
+.title-slide {
+	background-color: white;
+  /*background-origin: content-box;
+  background-position: center bottom 25px;
+	background-size: 25%;*/
+	background-image: url("../figures/chinook2.png");
+	background-position: bottom 0px left 0px;
+	/* background-repeat: no-repeat; */
+ /* background-size: 900px 300px; */
+	}
+
+#titlebox {
+  background-color: white;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  border: 0px dotted black;
+  padding: 15px 0;
+  color: #000063;
+  font-size: 45px;
+  text-align: left;
+  /*background: url("../figures/blue_fish_back_large.png");*/
+}
+
+#authorbox{
+  background-color: #000063;
+  top: 300px;
+  left: 0px;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  /*height: 50px;*/
+  border: 0px dotted black;
+  padding: 50px 100px;
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  background-image: url("../figures/NPTlogos2.png");
+	background-position: top 50% right 300px ;
+	background-repeat: no-repeat;
+  background-size: 200px 100px;
+}
+
+.mainslide {
+   /*background-color: white;*/
+   color: #000063;
+   /*font-size: 2em;*/
+   background-image: url("../figures/NPTlogos2.png");
+   background-position: top 10px right 10px, bottom left;
+   background-size: 100px 50px, 900px 200px;
+   }
+
+.inverse {
+   background-color: #000063;
+   color: white;
+   /*color: black;
+   text-shadow: 0 0 20px #000063; */
+   /*font-size: 2em;*/
+   background-image: url("../figures/NPTlogos2.png");
+   background-position: top 10px right 10px;
+   background-size: 100px 50px;
+}
+
+.remark-slide-number {
+  margin-right: 5px;
+  font-size: 10pt;
+  /*right: 50%;
+  font-size: 10pt;
+  margin-bottom: -11.6px;
+  margin-right: 10px;
+  color: red; /* white */
+  opacity: 0.5; /* default: 0.5 */
+}
+
+a{
+  color: blue;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.outline {font-weight: bold;
+color: white; }
+
+.dfrm {color: #000063;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.bold {font-weight: bold;}
+.white {color: white; }
+.yellow {color: yellow; }
+.red {color: red; }
+
+.centered{text-align: center;}
+
+.mission {
+  font-weight: bold;
+   font-size: 2em;
+   color: #66a3ff;
+}
+
+.center-left {
+  position:          relative;
+  top:               50%;
+  transform:         translateY(50%);
+}
+.center-right {
+  position:          relative;
+  top:               50%;
+  transform:         translateY(10%);
+}
+
+IMG.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+
+.show-only-last-code-result pre + pre:not(:last-of-type) code[class="remark-code"] {
+    display: none;
+}
+
+/*code.r{
+  font-size: 12px;
+}*/
+
+/*pre {
+  font-size: 16px;
+  background: lightgrey;
+  color: #000063 ;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  max-height: 50px;
+  padding-bottom: 10px;
+}*/
+
+.remark-code {
+  display: block;
+  font-size: 12px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  max-width: 100%;
+  padding: .5em;
+  color: #000063 ;
+  background: #f8f8f8;
+}
+
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  padding-left: 1%;
+}
+
+.tiny{
+  font-size: 50%;
+}
+
+/* Style all font awesome icons as square*/
+/*.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}*/
+
+/* style fa icons as circles */
+/*.fa {
+  padding: 18px;
+  font-size: 12px;
+  width: 12px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}*/
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* email */
+.fa-envelope {
+  background: #000063;
+  color: white;
+}
+
+/* email */
+.fa-paper-plane {
+  background: #000063;
+  color: white;
+}
+
+/* GitHub */
+.fa-github {
+  background: #000063;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #000063;
+  color: white;
+}
+
+/* weblink */
+.fa-link {
+  background: #000063;
+  color: white;
+}
+
+
+
+

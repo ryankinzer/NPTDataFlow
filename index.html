@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>A streamlined data flow for improved decision making: data collection to analysis and all the gunk in between</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan N. Kinzer" />
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+    <script src="index_files/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+    <script src="index_files/jquery-1.12.4/jquery.min.js"></script>
+    <link href="index_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="index_files/datatables-binding-0.16/datatables.js"></script>
+    <link href="index_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="index_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="index_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="index_files/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+    <script src="index_files/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+    <link href="index_files/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+    <script src="index_files/selectize-0.12.0/selectize.min.js"></script>
+    <link href="index_files/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="index_files/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: title-slide
+
+&lt;div id="titlebox"&gt;
+  &lt;hr style="height:2px;border-width:0;color:#000063;background-color:#000063"&gt;
+  &lt;hr style="height:2px;border-width:0;color:#000063;background-color:#000063"&gt;
+  &lt;p&gt;.bold[Streamlined data flow for improved decision making:]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="authorbox"&gt;
+
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+  Ryan N. Kinzer
+    &lt;a href="mailto: ryank@nezperce.org" class="fa fa-paper-plane"&gt;&lt;/a&gt;
+    &lt;a href="http://github.com/ryankinzer" class="fa fa-github"&gt;&lt;/a&gt;
+    &lt;a href="http://twitter.com/kinzer_ryan" class="fa fa-twitter"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+  Nez Perce Tribe &lt;br/&gt;
+  Department of Fisheries Resources Management &lt;br/&gt;
+  Research Division &lt;a href="https://nptfisheries.shinyapps.io/kus-data/" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+&lt;/div&gt;  
+---
+
+class:  mainslide, center, middle
+
+&lt;p style="font-size:40px"&gt;...from data collection to reporting and all the gunk in between.&lt;/p&gt;
+
+---
+class: mainslide
+layout: true
+---
+class: center, middle
+
+background-color: black
+background-image: url("figures/problem.png")
+background-position: top 0px left 0px
+background-size: 100%
+
+
+.white["Bad data for half the price of good data is a fool's investment." - Clark and Whitfield 1993
+
+"science is presently hindered by the '80:20 problem'...." – Michener 2012
+
+"More often than scientists would like to admit, they cannot even recover the data associated with their own published works." – Goodman et al. 2014
+
+"This fundamental shift in thinking from 'I own the data' to 'I collect and share the data' .... is essential to the transparency and reproducibility of the open science framework." – Hampton et al. 2015]
+
+???
+Define the problem.
+
+---
+# My Goals for Today
+* Share some of the problems ....Recognize some of the problems we face.
+* Get creative juices flowing.
+* An example of how DFRM is tackling the issues.
+
+&lt;img class = "displayed" src = 'figures/crossed-fingers.png' width = 75%/&gt;
+
+???
+`$$y_{ij} = \mu + x\beta_j + \epsilon_{ij}$$`
+
+---
+class: inverse, center, middle
+
+
+## What is the biggest data related issue you face as a biologist?
+
+.pull-left[
+* .yellow[Collecting and Accessing]
+* Preserving and Protecting
+* Summarizing and Analyzing
+* Timely Reporting and Publishing
+* Sharing Results
+]
+
+.pull-right[
+    &lt;img src = 'figures/data_access.png' width = 100%/&gt;
+]
+
+???
+* Columbia River basin and PIT-tag data, or CWT data stored in the RMIS database, genetics data--often requires intimate knowledge of data repository and queries to get the right information you are looking for.
+
+---
+class: inverse, center, middle
+
+## What is the biggest data related issue you face as a biologist?
+
+.pull-left[
+* Collecting and Accessing
+* .yellow[Preserving and Protecting]
+* Summarizing and Analyzing
+* Timely Reporting and Publishing
+* Sharing Results
+]
+
+.pull-right[
+    &lt;img src = 'figures/RME_2020_spending.png' width = 100%/&gt;
+]
+
+???
+* In 2020, Bonneville Power Administration spent over 100 million on RME, and over half of that was spent on data collection.
+---
+class: inverse, center, middle
+
+
+## What is the biggest data related issue you face as a biologist?
+
+.pull-left[
+* Collecting and Accessing
+* Preserving and Protecting
+* .yellow[Summarizing and Analyzing]
+* Timely Reporting and Publishing
+* Sharing Results
+]
+
+.pull-right[
+    &lt;img src = 'figures/data_summaries.jpg' width = 100%/&gt;
+]
+
+???
+Big data....PTAGIS data base contains over 
+
+---
+class: inverse, center, middle
+## What is the biggest data related issue you face as a biologist?
+
+.pull-left[
+* Collecting and Accessing
+* Preserving and Protecting
+* Summarizing and Analyzing
+* .yellow[Timely Reporting and Publishing]
+* Sharing Results
+]
+
+.pull-right[
+&lt;img src = 'figures/data_reporting.jpg' width = 100%/&gt;
+]
+
+???
+Returning back to the 80:20 problem I mentioned earlier, do you have enought time to adequatly focus on analysis and reporting?; 
+
+---
+class: inverse, center, middle
+## What is the biggest data related issue you face as a biologist?
+
+.pull-left[
+* Collecting and Accessing
+* Preserving and Protecting
+* Summarizing and Analyzing
+* Timely Reporting and Publishing
+* .yellow[Sharing Results]
+]
+
+.pull-right[
+    &lt;img src = 'figures/data_decisions.jpg' width = 100%/&gt;
+]
+
+???
+What about getting your results noticed and used, to support informed decision making? Do the decision makers actually look at and use your reports and findings?
+---
+# Presentation Outline
+* DFRM RME Background
+  * History and Structure
+  * Our (DFRM) Data Management History
+  * Problems we faced
+* Strategy and Vision
+  * Data Flow and System
+  * Recognize lots of effort in Columbia Basin currentlyh
+    * don't reinvent the wheel if not necessary
+* Implementation and the tools we use
+  * Database / Warehouse
+  * Data Management/Aggregation
+  * Data Maturity Model
+* R Packages
+  * Data Wrangling
+  * Summarize
+  * Analysis - R
+  * CAX Push - Python
+* Data Managment Timeline and Progress
+* GitHub
+  
+???
+Use the ice breaker question as the outline!!!
+
+The big deal is not just having the data, but being able to quickly and efficiently access needed data.
+Ensure high quality results
+
+Data Management Maturity Model
+
+What is the Data Science Process
+  
+---
+class: inverse
+
+&lt;br/&gt;
+&lt;iframe  title="My Map" width="1800" height="550" src="figures/npt_locations.html" frameborder="2" allowfullscreen&gt;&lt;/iframe&gt;
+
+???
+
+DFRM Research Division Background
+M&amp;E for Hatchery Program Evaluations
+Filled M&amp;E Gaps for Key Populations
+  
+---
+## Problems Encountered
+
+&lt;div class="row"&gt;
+  &lt;div class="column"&gt;
+    &lt;img src = 'figures/spreadsheet.gif' width = 75%/&gt;
+    &lt;img src = "figures/data_cleansing.png" width=75%/&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;img src = "figures/trust.png" width=75%/&gt;
+    &lt;img src = 'figures/apple_orange.jpg' width = 75%/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+---
+## Problems Encountered
+
+  &lt;img src = 'figures/drives.png' width = 100%/&gt;
+---
+* Early Years
+  * did this work?
+* Our RM&amp;E History
+
+---
+
+
+---
+# Problems we faced
+* Collecting and Accessing
+  - Consistency
+  - Efficiencies and versioning problems
+* Preserving and Protecting
+  - Hard Copies
+  - Outdated file formats
+  - Personnel Changes
+* Summarizing and Analyzing
+  - Lack of expertise/training
+  - Consistency
+  - Reproducibility
+  - Spreadsheets
+* Timely Reporting and Publishing
+  - Not enough time.
+* Sharing Results
+  - Detailed Annual Reports
+---
+
+class: inverse, left, middle
+# Data Strategy and Vision
+
+&lt;img src="figures/data_man_vision.png"/&gt;
+
+---
+
+class: inverse, left, top
+## Consistency and Standard Methods
+
+.pull-left[
+Data Collection
+&lt;img src="figures/protocols.png" width = 400px; height = 450px/&gt;
+]
+
+.pull-right[
+Summaries and Analysis
+&lt;img src="figures/methods.png" width = 400px; height = 450px/&gt;
+]
+
+???
+Introduce idea of tech teams?
+---
+class: inverse, right, middle
+
+# Current Data Architecture
+
+&lt;img src="figures/data_flow.png"/&gt;
+---
+
+# Current Staffing/Product Structure
+
+can we show tech teams and contributions?
+what about monitoring strategy?
+
+---
+
+# Available Datasets
+
+---
+
+# Data Maturity Model
+
+---
+
+## All sounds great...but what are the problems now?
+
+---
+class: inverse, middle, center
+
+# Examples
+Sp/Sm Chinook Salmon Female Proportion &lt;br/&gt; 
+Spring/summer Chinook Salmon Escapement &lt;br/&gt;
+Steelhead Juvenile Survival &lt;br/&gt;
+
+---
+
+## Sp/sm Chinook Salmon Escapement - Background
+
+.pull-left[
+
+### Adjusted Lincoln-Petersen (Chapman 1951)
+$$
+\hat{N} = (\frac{(C+1)*(M+1)}{(R+1)}) - 1
+$$
+
+### Adult Weir Data
+`\(M =\)` Marks Released &lt;br/&gt;
+
+### Spawning Ground Survey Data
+`\(C =\)` Total Carcasses Collected &lt;br/&gt;
+`\(R =\)` Recaptured Carcasses &lt;br/&gt;
+]
+
+.pull-right[
+&lt;img src = "figures/Lostine Weir2.jpg"/&gt;
+&lt;img src = "figures/carcass.png"/&gt;
+]
+---
+## Data Collection
+
+.pull-left[
+#### Spawning Ground Surveys
+&lt;img src = "figures/maxresdefault.jpg" width = 75%/&gt;
+]
+
+.pull-right[
+#### Adult Weir Operations
+&lt;img src = "figures/fins_logo.jpg" width = 75%/&gt;
+]
+
+.center[
+#### CDMS
+&lt;img src = "figures/cdms.png" width = 50%/&gt;
+]
+
+???
+*collection is electronic but offline due to our monitoring locations
+*so not exactly real-time....but close
+
+---
+
+## Data Access: 
+
+
+
+.left-code[
+
+```r
+library(tidyverse)
+library(cdmsR)
+cdmsLogin(username, password)
+```
+
+&lt;img src = "figures/cdmsR_hex.png" width = 25%/&gt;
+]
+
+.right-plot[
+
+```r
+# Check available datasets
+glimpse(getDatastores())
+```
+
+```
+## Rows: 26
+## Columns: 8
+## $ Id             &lt;int&gt; 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, ...
+## $ Name           &lt;chr&gt; "SGS Redd Data", "SGS Carcass Data", "NPT Summarized...
+## $ Description    &lt;chr&gt; "Nez Perce Tribe spawning ground survey redd dataset...
+## $ TablePrefix    &lt;chr&gt; "SGS_Redd", "SGS_Carcass", "NPT_Age", "StreamNet_Juv...
+## $ LocationTypeId &lt;chr&gt; "1122", "1122", "1134", "1125", "1125", "1125", "112...
+## $ DefaultConfig  &lt;chr&gt; "{\r\n\"DataEntryPage\":\r\n\t{\r\n\t\"HiddenFields\...
+## $ OwnerUserId    &lt;int&gt; 3156, 3156, 3156, 3156, 3156, 3156, 3156, 3156, 3156...
+## $ TableType      &lt;chr&gt; "Header+Detail", "Header+Detail", "Header+Detail", "...
+```
+]
+
+---
+
+## Carcass Data Access: cdmsR
+
+.pull-left[
+
+```r
+#car_dat &lt;- getDatasetView(datastoreID = 79)
+#save(car_dat, file = './data/car_dat.rda')
+load('./data/car_dat.rda')
+
+library(cuyem)
+# Basic QA/QC and create valued-added fields
+cleaned_car &lt;- clean_carcassData(car_dat)
+```
+.center[
+&lt;img src = "figures/cdms.png" width = 50%/&gt;
+]
+]
+
+.pull-right[
+
+```
+## Rows: 32,304
+## Columns: 82
+## $ ESU_DPS              &lt;chr&gt; "Snake River Fall-run Chinook Salmon ESU", "Sn...
+## $ MPG                  &lt;chr&gt; "Snake River", "Snake River", "Snake River", "...
+## $ POP_NAME             &lt;chr&gt; "Snake River Lower Mainstem", "Snake River Low...
+## $ TRT_POPID            &lt;chr&gt; "SNLMA-f", "SNLMA-f", "SNLMA-f", "SNLMA-f", "S...
+## $ Species              &lt;chr&gt; "Chinook salmon", "Chinook salmon", "Chinook s...
+## $ Run                  &lt;chr&gt; "Fall", "Fall", "Fall", "Fall", "Fall", "Fall"...
+## $ ReportingGroup       &lt;chr&gt; "Clearwater River", "Clearwater River", "Clear...
+## $ StreamName           &lt;chr&gt; "Clearwater River", "Clearwater River", "Clear...
+## $ TribToName           &lt;chr&gt; "Snake River", "Snake River", "Snake River", "...
+## $ LocationLabel        &lt;chr&gt; "Clearwater River: Transect - Lower Clearwater...
+## $ TransectName         &lt;chr&gt; "Lower Clearwater River", "Lower Clearwater Ri...
+## $ SurveyYear           &lt;dbl&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ SurveyDate           &lt;date&gt; 2013-11-20, 2013-11-20, 2013-11-20, 2013-11-2...
+## $ ActivityDate         &lt;chr&gt; "2013-11-20T00:00:00", "2013-11-20T00:00:00", ...
+## $ ActivityId           &lt;int&gt; 35108, 35108, 35108, 35108, 35108, 35108, 3510...
+## $ DatasetId            &lt;int&gt; 4325, 4325, 4325, 4325, 4325, 4325, 4325, 4325...
+## $ LocationId           &lt;int&gt; 612, 612, 612, 612, 612, 612, 612, 612, 612, 6...
+## $ TargetSpecies        &lt;chr&gt; "F_CHN", "F_CHN", "F_CHN", "F_CHN", "F_CHN", "...
+## $ Pass                 &lt;int&gt; -99, -99, -99, -99, -99, -99, -99, -99, -99, -...
+## $ StartSurvey          &lt;chr&gt; "RKm 6.4", "RKm 6.4", "RKm 6.4", "RKm 6.4", "R...
+## $ EndSurvey            &lt;chr&gt; "RKm 70.6", "RKm 70.6", "RKm 70.6", "RKm 70.6"...
+## $ StartTime            &lt;chr&gt; "00:00:00", "00:00:00", "00:00:00", "00:00:00"...
+## $ EndTime              &lt;chr&gt; "00:00:00", "00:00:00", "00:00:00", "00:00:00"...
+## $ Observers            &lt;chr&gt; "BA", "BA", "BA", "BA", "BA", "BA", "BA", "BA"...
+## $ SurveyMethod         &lt;chr&gt; "Boat", "Boat", "Boat", "Boat", "Boat", "Boat"...
+## $ GPSUnit              &lt;chr&gt; "NC", "NC", "NC", "NC", "NC", "NC", "NC", "NC"...
+## $ Datum                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Weather              &lt;chr&gt; "NC", "NC", "NC", "NC", "NC", "NC", "NC", "NC"...
+## $ Visibility           &lt;chr&gt; "NC", "NC", "NC", "NC", "NC", "NC", "NC", "NC"...
+## $ SurveyComments       &lt;chr&gt; "Location=Clearwater River", "Location=Clearwa...
+## $ SampleNumber         &lt;chr&gt; "0249", "0250", "0251", "0252", "0253", "0254"...
+## $ HistoricSampleNumber &lt;chr&gt; "13-249", "13-250", "13-251", "13-252", "13-25...
+## $ CarcassSpecies       &lt;chr&gt; "F_CHN", "F_CHN", "F_CHN", "F_CHN", "F_CHN", "...
+## $ Sex                  &lt;chr&gt; "Male", "Male", "Male", "Female", "Female", "F...
+## $ ForkLength           &lt;int&gt; 600, 620, 660, 700, 810, 870, 530, 790, 600, 6...
+## $ SpawnedOut           &lt;chr&gt; "Unknown", "Unknown", "Unknown", "Yes", "Yes",...
+## $ PercentSpawned       &lt;int&gt; -99, -99, -99, 100, 100, 100, -99, 100, -99, -...
+## $ OpercleLeft          &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "No"...
+## $ OpercleRight         &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "No"...
+## $ PITScanned           &lt;chr&gt; "Yes", "Yes", "Yes", "No", "No", "No", "No", "...
+## $ PITCode              &lt;chr&gt; "3D9.1C2D9AE593", "3D9.1C2DA7BCDD", "3D9.1C2DA...
+## $ AdiposeFinClipped    &lt;chr&gt; "No", "No", "No", "Yes", "Yes", "Yes", "No", "...
+## $ CWTScanned           &lt;chr&gt; "No", "Yes", "No", "Yes", "Yes", "No", "Yes", ...
+## $ SnoutCollected       &lt;chr&gt; "No", "Yes", "No", "Yes", "Yes", "No", "Yes", ...
+## $ Fins                 &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "No"...
+## $ Scales               &lt;chr&gt; "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes...
+## $ Otolith              &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "No"...
+## $ Count                &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ CarcassComments      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Latitude             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Longitude            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ RadioTag             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ TransmitterType      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Vendor               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ SerialNumber         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Frequency            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Channel              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Code                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ TagsFloy             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ TagsVIE              &lt;chr&gt; "No", "No", "No", "No", "No", "No", "No", "No"...
+## $ TagsJaw              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ TagsStaple           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ TagsSpaghetti        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ MarksVentralFin      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Notes                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ QAStatusId           &lt;int&gt; 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6...
+## $ CWTCode              &lt;chr&gt; "NA", "220205", "NA", "635997", "220200", "NA"...
+## $ TagsPetersonDisk     &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ CarcassWPT           &lt;chr&gt; "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"...
+## $ DNACollected         &lt;chr&gt; "No", "No", "No", "No", "Yes", "No", "Yes", "Y...
+## $ ActivityQAStatusId   &lt;int&gt; 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6...
+## $ ActivityQAComments   &lt;chr&gt; "Bulk import from sgs_master by RK", "Bulk imp...
+## $ FieldsheetLink       &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ QAStatusName         &lt;chr&gt; "Ready for QA", "Ready for QA", "Ready for QA"...
+## $ EffDt                &lt;chr&gt; "2018-12-07T14:30:51.03", "2018-12-07T14:30:51...
+## $ Year                 &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ AboveWeir            &lt;chr&gt; "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes...
+## $ AbovePITArray        &lt;chr&gt; "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes...
+## $ AboveRST             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ Origin               &lt;chr&gt; "Natural", "Hatchery", "Natural", "Hatchery", ...
+## $ Mark_Discernible     &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE...
+## $ Recapture            &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS...
+```
+]
+
+---
+## Weir Data Access: fisheR
+
+.pull-left[
+
+```r
+library(fisheR)
+# trap_dat &lt;- get_FINSdata(module = 'Trapping',
+#                          scope = 'NPT',
+#                          startDate = '01/01/1990',
+#                          endDate = '12/31/2020')
+#trap_dat &lt;- getDatasetView(datastoreID = 99)
+#save(trap_dat, file = './data/trap_dat.rda')
+#save(trap_dat, file = './data/trap_dat_NPT.rda')
+load('./data/trap_dat.rda')
+cleaned_trap &lt;- clean_weirData(trap_dat)
+```
+.center[
+&lt;a href= "https://www.finsnet.org/"&gt; &lt;img src=
+"figures/fins_logo.jpg"&gt; &lt;/a&gt;
+  ]
+]
+
+.pull-right[
+
+```
+## Rows: 326,483
+## Columns: 73
+## $ trap_year                    &lt;dbl&gt; 2014, 2014, 2010, 2014, 2017, 2017, 20...
+## $ trapped_date                 &lt;date&gt; 2014-08-12, 2014-08-12, 2010-08-18, 2...
+## $ tmp_fish_id                  &lt;chr&gt; "1", "10", "1000", "10000", "100000", ...
+## $ current_location             &lt;chr&gt; NA, NA, "Upstream", "Upstream", NA, NA...
+## $ final_location               &lt;chr&gt; NA, NA, "Upstream", "Upstream", NA, NA...
+## $ finalize                     &lt;chr&gt; "False", "False", "False", "False", "F...
+## $ verify                       &lt;chr&gt; "False", "False", "False", "False", "F...
+## $ `follow-up`                  &lt;chr&gt; "False", "False", "False", "False", "F...
+## $ is_import                    &lt;chr&gt; "False", "False", "True", "False", "FA...
+## $ facility                     &lt;chr&gt; "Rapid River Fish Hatchery", "Rapid Ri...
+## $ trap                         &lt;chr&gt; "Rapid River Fish Trap", "Rapid River ...
+## $ trap_is_offsite              &lt;chr&gt; "False", "False", "False", "False", "F...
+## $ trapping_session_name        &lt;chr&gt; "Session - 08/12/2014 Rapid River Fish...
+## $ target_species               &lt;chr&gt; "Chinook", "Chinook", "Chinook", "Chin...
+## $ target_run                   &lt;chr&gt; "Spring", "Spring", "Summer", "Spring"...
+## $ trapping_session_commnets    &lt;chr&gt; NA, NA, "TENDER(S): UNKNOWN", NA, "24F...
+## $ fish_id                      &lt;chr&gt; "17", "26", "10", "50", "78", "79", "8...
+## $ count                        &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ species                      &lt;chr&gt; "Chinook", "Chinook", "Chinook", "Bull...
+## $ run                          &lt;chr&gt; "Spring", "Spring", "Summer", NA, "Sum...
+## $ sex                          &lt;chr&gt; "Female", "Female", "Male", "Unknown",...
+## $ origin                       &lt;chr&gt; "Hatchery-Segregated", "Hatchery-Segre...
+## $ origin_expression            &lt;chr&gt; "( Existing Adipose Clipped [Mark AD] ...
+## $ origin_description           &lt;chr&gt; "Hatchery-Segregated", "Hatchery-Segre...
+## $ origin_creator               &lt;chr&gt; "Bethm", "Bethm", "dougn", NA, "Defaul...
+## $ origin_creation_date         &lt;chr&gt; "2017-07-10T00:00:00", "2017-07-10T00:...
+## $ living_status                &lt;chr&gt; "Alive", "Alive", "Alive", "Alive", "A...
+## $ length                       &lt;dbl&gt; 730, 690, 700, 380, 800, 830, 860, 800...
+## $ age_designation              &lt;chr&gt; "Adult", "Adult", "Adult", NA, NA, NA,...
+## $ age_calculated               &lt;chr&gt; "True", "True", "True", "False", "FALS...
+## $ age_criteria_start_length    &lt;chr&gt; "610", "610", "670", NA, NA, NA, NA, N...
+## $ age_criteria_end_length      &lt;chr&gt; "1500", "1500", "1500", NA, NA, NA, NA...
+## $ age_criteria_start_date      &lt;chr&gt; "2013-12-31T00:00:00", "2013-12-31T00:...
+## $ age_criteria_end_date        &lt;chr&gt; "2020-12-31T00:00:00", "2020-12-31T00:...
+## $ moved_to_facility            &lt;chr&gt; "Rapid River Fish Hatchery", "Rapid Ri...
+## $ moved_to                     &lt;chr&gt; "RRFH: HP 2", "RRFH: HP 2", "Johnson C...
+## $ moved_to_location_type       &lt;chr&gt; "Holding", "Holding", "Release Site", ...
+## $ moved_to_is_offsite          &lt;chr&gt; "False", "False", "False", "False", "F...
+## $ offsite_owner_facility       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, " Clearwat...
+## $ offsite_location_latitude    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "0", NA, N...
+## $ offsite_location_longitude   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, "0", NA, N...
+## $ offsite_location_description &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, " DNFH HP1...
+## $ disposition                  &lt;chr&gt; "Ponded", "Ponded", "Released", "Relea...
+## $ release_site                 &lt;chr&gt; NA, NA, "Johnson Creek: Above Weir", "...
+## $ release_site_latitude        &lt;chr&gt; NA, NA, "44.901063", "44.1234550476074...
+## $ release_site_longitude       &lt;chr&gt; NA, NA, "-115.488947", "-117.123458862...
+## $ purpose                      &lt;chr&gt; "Brood Stock", "Brood Stock", "Natural...
+## $ existing_marks               &lt;chr&gt; "AD", "AD", "UNC", "UNC", "AD", "AD", ...
+## $ existing_marks_quantity      &lt;chr&gt; "1", "1", "1", "1", "1", "1", "1", "1"...
+## $ applied_marks                &lt;chr&gt; NA, NA, " CP", "CP", " LON", " LON", "...
+## $ applied_marks_quantity       &lt;chr&gt; NA, NA, "1", "1", "1", "1", "1", "1", ...
+## $ existing_tags                &lt;chr&gt; "None", "None", "None", "None", "None"...
+## $ applied_tags                 &lt;chr&gt; NA, NA, "OP LYTT 2852", NA, NA, NA, NA...
+## $ existing_cwt                 &lt;chr&gt; "Not Present", "Not Present", "Not Pre...
+## $ existing_cwt_value           &lt;chr&gt; NA, NA, " ", NA, NA, NA, NA, NA, NA, N...
+## $ applied_cwt                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ applied_cwt_value            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ existing_pit                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ applied_pit                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ samples                      &lt;chr&gt; NA, NA, "GEN 2852", NA, NA, NA, NA, NA...
+## $ conditions                   &lt;chr&gt; "GBT, MC", "CFD, HI", NA, NA, NA, NA, ...
+## $ recap                        &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FAL...
+## $ injected                     &lt;chr&gt; "False", "False", "True", "False", "FA...
+## $ weight                       &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ notes                        &lt;chr&gt; NA, "opercle", NA, NA, NA, NA, NA, NA,...
+## $ group_notes                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ import_custom                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ weir                         &lt;chr&gt; "Rapid River Fish Trap", "Rapid River ...
+## $ stream                       &lt;chr&gt; "Rapid River Fish Trap", "Rapid River ...
+## $ release_up                   &lt;lgl&gt; FALSE, FALSE, TRUE, TRUE, FALSE, FALSE...
+## $ release_dwn                  &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FAL...
+## $ marked                       &lt;lgl&gt; FALSE, FALSE, TRUE, FALSE, FALSE, FALS...
+## $ recapped                     &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FAL...
+```
+]
+---
+# Estimate Escapement: cuyem
+
+```r
+MR_ests &lt;- get_MRests(cleaned_trap, cleaned_car,
+           species = 'Chinook',
+           alpha = 0.05)
+```
+
+---
+
+## Summarize Data: cuyem
+
+
+```r
+# Estimate Female Proportion
+fem_p &lt;- cleaned_car %&gt;%
+  filter(CarcassSpecies == 'S_CHN',
+*        POP_NAME == 'East Fork South Fork Salmon River',
+         Origin != 'Unknown',
+         Sex != 'Unknown') %&gt;%
+  est_group_p(.summary_var = Sex, alpha = 0.05,
+              SurveyYear,
+              Origin)
+```
+--
+.tiny[
+
+<div id="htmlwidget-a6998c85e69c5aca26d8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a6998c85e69c5aca26d8">{"x":{"filter":"top","filterHTML":"<tr>\n  <td><\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"1987\" data-max=\"2020\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"314\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"1\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"0.35\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"0.63\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0.07\" data-max=\"1\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58"],[1987,1988,1989,1990,1991,1992,1993,1993,1994,1995,1996,1996,1997,1997,1998,1999,2000,2000,2001,2001,2002,2002,2003,2003,2004,2004,2005,2005,2006,2006,2007,2007,2008,2008,2009,2009,2010,2010,2011,2011,2012,2012,2013,2013,2014,2014,2015,2015,2016,2016,2017,2017,2018,2018,2019,2019,2020,2020],["Natural","Natural","Natural","Natural","Natural","Natural","Hatchery","Natural","Natural","Natural","Hatchery","Natural","Hatchery","Natural","Natural","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural","Hatchery","Natural"],["Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female","Female"],[15,24,18,1,32,17,1,83,6,2,0,11,1,45,70,10,1,11,3,314,79,204,51,226,12,23,20,8,9,5,9,18,61,71,153,45,191,84,91,66,60,105,35,69,48,206,35,32,68,154,6,12,36,46,12,17,4,37],[0.47,0.5,0.72,0.11,0.65,0.22,0.5,0.57,1,1,0,0.61,0.33,0.3,0.72,0.45,0.17,0.39,0.03,0.42,0.42,0.46,0.47,0.55,0.4,0.44,0.53,0.2,0.26,0.2,0.14,0.35,0.36,0.42,0.37,0.34,0.59,0.28,0.43,0.35,0.61,0.5,0.28,0.29,0.23,0.47,0.54,0.49,0.65,0.65,0.15,0.36,0.55,0.49,0.75,0.65,0.17,0.44],[0.09,0.07,0.09,0.1,0.07,0.05,0.35,0.04,0,0,0,0.11,0.27,0.04,0.05,0.11,0.15,0.09,0.01,0.02,0.04,0.02,0.05,0.02,0.09,0.07,0.08,0.06,0.08,0.08,0.04,0.07,0.04,0.04,0.02,0.04,0.03,0.03,0.03,0.03,0.05,0.03,0.04,0.03,0.03,0.02,0.06,0.06,0.05,0.03,0.06,0.08,0.06,0.05,0.11,0.09,0.08,0.05],[0.31,0.36,0.52,0.02,0.51,0.14,0.09,0.49,0.61,0.34,0,0.39,0.06,0.24,0.63,0.27,0.03,0.24,0.01,0.38,0.35,0.41,0.38,0.5,0.25,0.32,0.37,0.1,0.15,0.09,0.07,0.24,0.29,0.35,0.32,0.27,0.53,0.23,0.36,0.29,0.51,0.43,0.21,0.24,0.18,0.43,0.42,0.37,0.55,0.59,0.07,0.22,0.43,0.39,0.51,0.46,0.07,0.34],[0.64,0.64,0.86,0.43,0.77,0.32,0.91,0.65,1,1,0.79,0.8,0.79,0.38,0.8,0.65,0.56,0.58,0.07,0.45,0.49,0.5,0.57,0.59,0.58,0.58,0.68,0.34,0.43,0.39,0.24,0.49,0.43,0.5,0.42,0.43,0.64,0.34,0.49,0.42,0.7,0.57,0.36,0.35,0.29,0.52,0.65,0.61,0.73,0.71,0.28,0.53,0.66,0.59,0.9,0.81,0.36,0.55]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>SurveyYear<\/th>\n      <th>Origin<\/th>\n      <th>Sex<\/th>\n      <th>n<\/th>\n      <th>p<\/th>\n      <th>SE<\/th>\n      <th>lwr<\/th>\n      <th>upr<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,4,5,6,7,8]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+]
+
+???
+Complete for the entire population and all years of record.
+Normally, or in the past, our biologists would have to pull
+down this data a single year at a time....pivot the spreadsheet,
+build equations.....etc.  with no mistakes.
+
+---
+## Summarize Data: cuyem
+
+.left-code[
+
+```r
+# Plot all Populations
+fem_p &lt;- cleaned_car %&gt;%
+  filter(CarcassSpecies == 'S_CHN',
+*        POP_NAME != 'NA',
+         Origin != 'Unknown',
+         Sex != 'Unknown') %&gt;%
+  est_group_p(.summary_var = Sex,
+              alpha = 0.05,
+*             POP_NAME,
+              SurveyYear,
+              Origin) 
+```
+
+
+```r
+# Plot
+fem_p %&gt;%
+  filter(Sex == 'Female') %&gt;%
+  ggplot(aes(x = SurveyYear,
+             y = p,
+             colour = Origin)) +
+  geom_pointrange(aes(ymin= lwr, ymax = upr),
+                  position = position_dodge(width = .5))+
+  facet_wrap(~POP_NAME,
+             nrow = 3,
+             labeller = label_wrap_gen(width = 25)) +
+  theme(legend.position = 'bottom')
+```
+]
+--
+
+.right-plot[
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" width="504" /&gt;
+]
+
+---
+# Ice Breaker
+What is your "go to" data analytical tools?
+  * Microsoft Excel
+  * R
+  * Python
+  * SAS
+  * SPSS
+---
+
+# Summary
+* First year of collaborative reporting
+  - lots of time developing and getting consensus
+* Second year
+  - revisting methods.
+
+---
+class: inverse, middle, center
+
+.pull-left[
+## Websites and Code
+need links to Github and tribes stuff,
+show links so folks can write them down.
+]
+
+.pull-right[
+#3 Images 
+Mark Anderson 
+  &lt;a href="http://andertoons.com" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;a href="http://twitter.com/andertoons" class="fa fa-twitter"&gt;&lt;/a&gt; 
+  &lt;br/&gt;
+Saskia Keultjes 
+  &lt;a href="http://saskdraws.com" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;a href="http://twitter.com/saskiakeultjes" class="fa fa-twitter"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+Chris Lysy
+  &lt;a href="http://freshspectrum.com" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;a href="http://twitter.com/clysy" class="fa fa-twitter"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+Timo Elliot
+  &lt;a href="https://timoelliott.com" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;a href="http://twitter.com/timoelliott" class="fa fa-twitter"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+Tom Fishburne
+  &lt;a href="https://marketoonist.com" class="fa fa-link"&gt;&lt;/a&gt;
+  &lt;a href="http://twitter.com/marketoonist" class="fa fa-twitter"&gt;&lt;/a&gt;
+  &lt;br/&gt;
+]
+
+???
+Mark Anderson - paid
+Saskia - no contact
+Chris - yes
+Timo - yes
+Tom - paid
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
