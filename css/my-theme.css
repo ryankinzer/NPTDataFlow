@@ -52,9 +52,9 @@
    /*background-color: white;*/
    color: #000063;
    /*font-size: 2em;*/
-   background-image: url("../figures/NPTlogos2.png");
+   /*background-image: url("../figures/NPTlogos2.png");
    background-position: top 10px right 10px, bottom left;
-   background-size: 100px 50px, 900px 200px;
+   background-size: 100px 50px, 900px 200px;*/
    }
 
 .inverse {
@@ -63,9 +63,10 @@
    /*color: black;
    text-shadow: 0 0 20px #000063; */
    /*font-size: 2em;*/
-   background-image: url("../figures/NPTlogos2.png");
+   text-shadow: none;
+   /*background-image: url("../figures/NPTlogos2.png");
    background-position: top 10px right 10px;
-   background-size: 100px 50px;
+   background-size: 100px 50px;*/
 }
 
 .remark-slide-number {
@@ -79,8 +80,8 @@
   opacity: 0.5; /* default: 0.5 */
 }
 
-a{
-  color: blue;
+.right-image{
+  position: top 50% right 0px;
 }
 
 .row {
@@ -103,25 +104,20 @@ a{
 .outline {font-weight: bold;
 color: white; }
 
-.dfrm {color: #000063;
+/*.dfrm {color: #000063;
   font-weight: bold;
   font-size: 36px;
-}
+}*/
 
 .bold {font-weight: bold;}
 .white {color: white; }
 .yellow {color: yellow; }
 .red {color: red; }
 
-.centered{text-align: center;}
+/*.centered{text-align: center;}
+*/
 
-.mission {
-  font-weight: bold;
-   font-size: 2em;
-   color: #66a3ff;
-}
-
-.center-left {
+/*.center-left {
   position:          relative;
   top:               50%;
   transform:         translateY(50%);
@@ -130,13 +126,13 @@ color: white; }
   position:          relative;
   top:               50%;
   transform:         translateY(10%);
-}
+}*/
 
-IMG.displayed {
+/*IMG.displayed {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 .highlight-last-item > ul > li,
 .highlight-last-item > ol > li {
@@ -151,22 +147,41 @@ IMG.displayed {
     display: none;
 }
 
-/*code.r{
+code.r{
   font-size: 12px;
-}*/
+}
 
-/*pre {
-  font-size: 16px;
-  background: lightgrey;
-  color: #000063 ;
+pre {
+  font-size: 12px;
+  /*background: lightgrey;
+  color: #000063 ;*/
   max-width: 100%;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  max-height: 50px;
-  padding-bottom: 10px;
-}*/
+  /*overflow-x: auto;
+  overflow-y: auto;*/
+  /*padding-bottom: 10px;*/
+}
 
-.remark-code {
+.short-Routput{
+  max-height: 500px;
+}
+
+.scroll-y{
+  overflow-y: scroll;
+}
+
+.scroll-x{
+  height: 12em;
+  overflow-x: scroll;
+}
+
+.scroll-box-24 {
+  height: 24em;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+
+/*.remark-code {
   display: block;
   font-size: 12px;
   overflow-x: scroll;
@@ -175,7 +190,8 @@ IMG.displayed {
   padding: .5em;
   color: #000063 ;
   background: #f8f8f8;
-}
+}*/
+
 
 .left-code {
   color: #777;
@@ -192,6 +208,8 @@ IMG.displayed {
 .tiny{
   font-size: 50%;
 }
+
+/* Font Styling*/
 
 /* Style all font awesome icons as square*/
 /*.fa {
