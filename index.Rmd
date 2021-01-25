@@ -170,25 +170,32 @@ background-position: top 0px left 0px
 background-size: 100%
 
 
-.white["Bad data for half the price of good data is a fool's investment." - Clark and Whitfield 1993
+.white[
+
+"Bad data for half the price of good data is a fool's investment." - Clark and Whitfield 1993
 
 "science is presently hindered by the '80:20 problem'...." – Michener 2012
 
 "More often than scientists would like to admit, they cannot even recover the data associated with their own published works." – Goodman et al. 2014
 
-"This fundamental shift in thinking from 'I own the data' to 'I collect and share the data' .... is essential to the transparency and reproducibility of the open science framework." – Hampton et al. 2015]
+"This fundamental shift in thinking from 'I own the data' to 'I collect and share the data' .... is essential to the transparency and reproducibility of the open science framework." – Hampton et al. 2015
+]
 
 ???
-Define the problem.
+These four quotes really resonated with me when I read them for the first time a few years ago, and how they pertained to my experiences working with various fish biologists over the years.  I won't read them exactly, but they will give you the reasons I'm moving forward in the way that I am, and that we will discuss today.
 
 ---
-# My Goals for Today
-* Highlight some of the **data problems** we face as scientists.
-* **Illustrate** one way to tackle the issues.
-* Hopefully, get your **creative juices flowing**.
+background-image: url('figures/NPTlogos2.png')
+background-position: top 5% right 5%
+background-size: 10%
+
+# Goals for Today
+* Highlight a few data management and analysis problems that we have faced.
+* Illustrate one way to tackle the issues.
+* Get you thinking about your data flow and ways to improve.
 
 .center[
-<img class = "displayed" src = 'figures/crossed-fingers.png' width = 75%/>
+<img class = "displayed" src = 'figures/data-is-the-new-oil-toxic-if-mishandled.jpg' width = 75%/>
 ]
 
 ???
@@ -200,19 +207,20 @@ class: inverse, middle, center
 
 ???
 
+And then selfishly, I want to generate discussion, learn from each other, and hopefully I discover from all of you how I can do things better. 
 
 ---
 class: inverse, center, middle
 
-
-### What is the biggest data related issue you face as a biologist?
+## MentiMeter Poll
+### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
-* .yellow[Collecting and Accessing]
+* .yellow[Querying and Accessing]
 * Preserving and Protecting
 * Summarizing and Analyzing
-* Timely Reporting and Publishing
-* Sharing Results
+* Timely Reporting
+* Sharing and Publishing Results
 ]
 
 .pull-right[
@@ -225,14 +233,15 @@ class: inverse, center, middle
 ---
 class: inverse, center, middle
 
-### What is the biggest data related issue you face as a biologist?
+## MentiMeter Poll
+### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
-* Collecting and Accessing
+* Querying and Accessing
 * .yellow[Preserving and Protecting]
 * Summarizing and Analyzing
-* Timely Reporting and Publishing
-* Sharing Results
+* Timely Reporting
+* Sharing and Publishing Results
 ]
 
 .pull-right[
@@ -244,15 +253,15 @@ class: inverse, center, middle
 ---
 class: inverse, center, middle
 
-
-### What is the biggest data related issue you face as a biologist?
+## MentiMeter Poll
+### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
-* Collecting and Accessing
+* Querying and Accessing
 * Preserving and Protecting
 * .yellow[Summarizing and Analyzing]
-* Timely Reporting and Publishing
-* Sharing Results
+* Timely Reporting
+* Sharing and Publishing Results
 ]
 
 .pull-right[
@@ -264,14 +273,16 @@ Big data....PTAGIS data base contains over
 
 ---
 class: inverse, center, middle
-### What is the biggest data related issue you face as a biologist?
+
+## MentiMeter Poll
+### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
-* Collecting and Accessing
+* Querying and Accessing
 * Preserving and Protecting
 * Summarizing and Analyzing
-* .yellow[Timely Reporting and Publishing]
-* Sharing Results
+* .yellow[Timely Reporting]
+* Sharing and Publishing Results
 ]
 
 .pull-right[
@@ -283,44 +294,46 @@ Returning back to the 80:20 problem I mentioned earlier, do you have enought tim
 
 ---
 class: inverse, center, middle
-### What is the biggest data related issue you face as a biologist?
+
+## MentiMeter Poll
+### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
-* Collecting and Accessing
+* Querying and Accessing
 * Preserving and Protecting
 * Summarizing and Analyzing
-* Timely Reporting and Publishing
-* .yellow[Sharing Results]
+* Timely Reporting
+* .yellow[Sharing and Publishing Results]
 ]
 
 .pull-right[
-    <img src = 'figures/stopconfusingmewithfacts.jpg' width = 100%/>
+    <img src = 'figures/i-have-data_3.jpg' width = 100%/>
 ]
+
+<a href="https://www.menti.com/eirgddtvad">https://www.menti.com/eirgddtvad</a>
 
 ???
 What about getting your results noticed and used, to support informed decision making? Do the decision makers actually look at and use your reports and findings?
+
 ---
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/embed/c1b1cea343c68eaa661412bde8e8cedf/b0e1bf101754' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+---
+background-image: url('figures/NPTlogos2.png')
+background-position: top 5% right 5%
+background-size: 10%
+
 # Presentation Outline
 * DFRM Research Division and RME Background
-  * History and Structure
-  * Our (DFRM) Data Management History
-  * Problems we faced
-* Strategy and Vision
-  * Data Flow and System
-  * Recognize lots of effort in Columbia Basin currentlyh
-    * don't reinvent the wheel if not necessary
-* Implementation and the tools we use
-  * Database / Warehouse
-  * Data Management/Aggregation
-  * Data Maturity Model
-* R Packages
-  * Data Wrangling
-  * Summarize
-  * Analysis - R
-  * CAX Push - Python
-* Data Managment Timeline and Progress
-* GitHub
-  
+* Data Management and Analysis Problems
+* Data Strategy and Vision
+* Example: Natural-origin Spawner Abundance
+
+.center[
+<img src="figures/stopconfusingmewithfacts.jpg"/>
+]
+
 ???
 
 The big deal is not just having the data, but being able to quickly and efficiently access needed data.
@@ -332,6 +345,9 @@ What is the Data Science Process
   
 ---
 class: middle
+background-image: url('figures/NPTlogos2.png')
+background-position: top 5% right 5%
+background-size: 10%
 
 ### DFRM RME Background
 
@@ -483,7 +499,7 @@ what about monitoring strategy?
 ---
 class: inverse, middle, center
 
-# Examples
+# Example
 
 ???
 Sp/Sm Chinook Salmon Female Proportion <br/> 
@@ -491,6 +507,8 @@ Spring/summer Chinook Salmon Escapement <br/>
 Steelhead Juvenile Survival <br/>
 
 ---
+class: center, middle
+
 ### Sp/sm Chinook Salmon - Natural-origin Spawner Abundance
 
 $$\hat{NOSA} = \hat{N}*(1-\hat{pHOS})*(1-\hat{pPSM}_{N})$$
@@ -554,7 +572,6 @@ $n_{s} =$  Spawned Carcasses<br/>
 ETIS - Samantha Smith: Jan. 7th, 2021, Latest applications for handheld devices for field data collection 
 
 ---
-class: inverse
 
 ## Data Access
 
@@ -590,7 +607,7 @@ glimpse(getDatastores())
 ]
 
 ---
-class: inverse
+
 ## Data Access
 
 .pull-left[
@@ -629,11 +646,13 @@ library(fisheR)
 ```
 
 ```{r get_trap, cache=TRUE, cache.extra = file.mtime('./data/trap_dat_NPT.rda')}
+# trap_dat <- get_FINSdata(
+#   module = 'Trapping',
+#   scope = 'NPT',
+#   startDate = '01/01/1990',
+#   endDate = '12/31/2020'
+# )
 
-# trap_dat <- get_FINSdata(module = 'Trapping',
-#                          scope = 'NPT',
-#                          startDate = '01/01/1990',
-#                          endDate = '12/31/2020')
 #save(trap_dat, file = './data/trap_dat.rda')
 load('./data/trap_dat.rda')
 cleaned_trap <- clean_weirData(trap_dat)
@@ -654,19 +673,26 @@ glimpse(cleaned_trap)
 ]
 
 ---
+background-image: url('figures/dfrm_hex.png')
+background-position: top 5% right 5%
+background-size: 10%
+
 # Estimate Escapement
 ```{r estMR}
-MR_ests <- get_MRests(cleaned_trap, cleaned_car,
-           species = 'Chinook',
-           alpha = 0.05)
+MR_ests <- get_MRests(
+  cleaned_trap, cleaned_car,
+  species = 'Chinook',
+  alpha = 0.05)
 ```
 
 .tiny[
 ```{r glimpse_mr, echo = FALSE}
 MR_ests %>% 
-  mutate(across(.cols = where(is.numeric), .fns = round, 2)) %>%
+  mutate(across(.cols = where(is.numeric), .fns = round, 2)
+  ) %>%
   DT::datatable(filter = 'top',
-                options = list(pageLength = 8))
+                options = list(pageLength = 8)
+  )
 ```
 ]
 
@@ -676,13 +702,17 @@ MR_ests %>%
 .left-code[
 ```{r est_pHOS}
 pHOS <- cleaned_car %>%
-  filter(CarcassSpecies == 'S_CHN',
-         Origin %in% c('Natural', 'Hatchery'),
-         AboveWeir == 'Yes') %>%
-  est_group_p(.summary_var = Origin,
-              alpha = 0.05,
-              SurveyYear,
-              StreamName) %>%
+  filter(
+    CarcassSpecies == 'S_CHN',
+    Origin %in% c('Natural', 'Hatchery'),
+    AboveWeir == 'Yes'
+  ) %>%
+  est_group_p(
+    .summary_var = Origin,
+    alpha = 0.05,
+    SurveyYear,
+    StreamName
+  ) %>%
   rename_with(~paste0('pHOS_',.x), n:upr)
 ```
 
@@ -714,14 +744,18 @@ pHOS %>%
 .left-code[
 ```{r est_pPSM}
 pPSM <- cleaned_car %>%
-  filter(CarcassSpecies == 'S_CHN',
-         Origin  == 'Natural',
-         SpawnedOut %in% c('Yes', 'No'),
-         AboveWeir == 'Yes') %>%
-  est_group_p(.summary_var = SpawnedOut,
-              alpha = 0.05,
-              SurveyYear,
-              StreamName) %>%
+  filter(
+    CarcassSpecies == 'S_CHN',
+    Origin  == 'Natural',
+    SpawnedOut %in% c('Yes', 'No'),
+    AboveWeir == 'Yes'
+  ) %>%
+  est_group_p(
+    .summary_var = SpawnedOut,
+    alpha = 0.05,
+    SurveyYear,
+    StreamName
+  ) %>%
   rename_with(~paste0('pPSM_',.x), n:upr)
 ```
 
@@ -756,16 +790,19 @@ pPSM %>%
 .left-code[
 ```{r est_NOSA}
 NOSA <- left_join(
-  MR_ests %>%
-    rename(SurveyYear = trap_year, StreamName = stream),
+  MR_ests %>% rename(SurveyYear = trap_year, StreamName = stream),
   pHOS %>%
     filter(Origin == 'Hatchery'),
-  by = c("SurveyYear", "StreamName")) %>%
+  by = c("SurveyYear", "StreamName")
+) %>%
   left_join(
     pPSM %>%
       filter(SpawnedOut == 'No'),
-    by = c("SurveyYear", "StreamName")) %>%
-  mutate(NOSA = N * (1-pHOS_p) * (1-pPSM_p))
+    by = c("SurveyYear", "StreamName")
+  ) %>%
+  mutate(
+    NOSA = N * (1-pHOS_p) * (1-pPSM_p)
+  )
 ```
 
 ```{r est_NOSA_fig, fig.show = 'hide', echo = FALSE}
@@ -792,7 +829,7 @@ NOSA %>%
 
 ---
 
-# Natural-origin Spawner Abundance - Take 2
+# Natural-origin Spawner Abundance
 
 .left-code[
 
@@ -835,10 +872,13 @@ MR_ests <- left_join(weir_disp, MR_ests, by = c('trap_year', 'stream', 'species'
 
 
 ```{r get_NOSA, warning=FALSE, message=FALSE}
-NOSA_ests <- get_NOSAests(cleaned_redd, cleaned_car, MR_ests)
+NOSA_ests <- get_NOSAests(cleaned_redd,
+                          cleaned_car,
+                          MR_ests
+                          )
 ```
 
-```{r NOSA_fig_2, fig.show = 'hide'}
+```{r NOSA_fig_2, fig.show = 'hide', echo = FALSE}
 NOSA_ests %>%
   filter(POP_NAME %in% c('East Fork South Fork Salmon River',
                          'Secesh River',
@@ -873,57 +913,115 @@ down this data a single year at a time....pivot the spreadsheet,
 build equations.....etc.  with no mistakes.
 
 ---
-# Ice Breaker
-What is your "go to" data analytical tools?
-  * Microsoft Excel
-  * R
-  * Python
-  * SAS
-  * SPSS
----
+class: inverse, bottom, left
+background-image: url('figures/dfrm_suite_hex.png')
+background-position: top 5% right 5%
+background-size: 50%
 
-# Summary
-* First year of collaborative reporting
-  - lots of time developing and getting consensus
-* Second year
-  - revisting methods.
+## Data Visualizaton and Reporting
 
 ---
-class: inverse, middle, center
+
+class: inverse, bottom, left
+background-image: url('figures/kus_hex.png')
+background-position: top 5% right 5%
+background-size: 15%
+
+## Data Visualizaton and Reporting
+
+.center[
+<a href="http://kus.nptfisheries.org/kus-data/">
+<img src="figures/kus_shiny.png"/>
+</a>
+]
+
+---
+class: inverse, center, middle
+
+## MentiMeter Poll
+### Which part of your research project takes the most time to complete?
+
+  * **Project Administration and Process** (e.g., planning, personnel, metadata documentation)
+  * **Budgeting and Contracting** (e.g., inventories, budget tracking, quarterly reports)
+  * **Data Management** (e.g., QA/QC, querying, summarizing)
+  * **Data Analysis and Hypothesis Testing** (e.g., defining and answering research questions)
+  * **Sharing Information and Publishing** (e.g., peer-reviewed, presentations, adaptive management)
+  
+.center[
+  <img src="figures/data_management_wordcloud.png"/>
+]
+  
+---
+# In Closing
 
 .pull-left[
-## Websites and Code
-need links to Github and tribes stuff,
-show links so folks can write them down.
+* Data Management is a work in progress
+* 2020 - 1st year of implementation
+  _ Collaborative Project Reports
+  - Focused on development
+  - Required compromises and concessions
+* Currently - 2021
+  - Reviewing and documenting methods
+  - Identifying missing parts
+  - Improving work flow
 ]
 
 .pull-right[
-#3 Images 
-Mark Anderson 
-  <a href="http://andertoons.com" class="fa fa-link"></a>
-  <a href="http://twitter.com/andertoons" class="fa fa-twitter"></a> 
-  <br/>
-Saskia Keultjes 
-  <a href="http://saskdraws.com" class="fa fa-link"></a>
-  <a href="http://twitter.com/saskiakeultjes" class="fa fa-twitter"></a>
-  <br/>
-Chris Lysy
-  <a href="http://freshspectrum.com" class="fa fa-link"></a>
-  <a href="http://twitter.com/clysy" class="fa fa-twitter"></a>
-  <br/>
+.center[
+  <img src="figures/data.gif"/>
+]
+]
+
+---
+class: inverse, bottom, left
+background-image: url('figures/tidy_dfrm_suite.png')
+background-position: top 5% right 5%
+background-size: 70%
+
+# Credits
+
+.pull-left[
+## Website
+
+<a href="http://kus.nptfisheries.org/kus-data"><img src = "figures/kus_hex.png" width = 15%/></a> </br>
+<a href="http://kus.nptfisheries.org/kus-data">http://kus.nptfisheries.org/kus-data</a>
+
+## Code
+
+<a href="http://github.com/ryankinzer/cdmsR"><img src = "figures/cdmsR_hex.png" width = 15%/></a>
+<a href="http://github.com/ryankinzer/cuyem"><img src = "figures/dfrm_hex.png" width = 15%/></a>
+<a href="http://github.com/ryankinzer/fisheR"><img src = "figures/fisheR_hex.png" width = 15%/></a>
+<a href="http://github.com/ryankinzer/kus"><img src = "figures/kus_hex.png" width = 15%/></a> </br>
+
+<a href="http://github.com/ryankinzer/" class="fa fa-github"> &nbsp; http://github.com/ryankinzer/</a>
+]
+
+.pull-right[
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+.bottom[
+## Cartoons
+
 Timo Elliot
-  <a href="https://timoelliott.com" class="fa fa-link"></a>
   <a href="http://twitter.com/timoelliott" class="fa fa-twitter"></a>
+  <a href="https://timoelliott.com" class="fa fa-link">https://timoelliott.com</a>
   <br/>
-Tom Fishburne
-  <a href="https://marketoonist.com" class="fa fa-link"></a>
-  <a href="http://twitter.com/marketoonist" class="fa fa-twitter"></a>
+  
+Chris Lysy
+  <a href="http://twitter.com/clysy" class="fa fa-twitter"></a>
+  <a href="http://freshspectrum.com" class="fa fa-link">http://freshspectrum.com</a>
   <br/>
+]
 ]
 
 ???
-Mark Anderson - paid
-Saskia - no contact
 Chris - yes
 Timo - yes
-Tom - paid
