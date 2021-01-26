@@ -174,7 +174,7 @@ background-size: 100%
 
 "Bad data for half the price of good data is a fool's investment." - Clark and Whitfield 1993
 
-"science is presently hindered by the '80:20 problem'...." – Michener 2012
+"Science is presently hindered by the '80:20 problem'...." – Michener 2012
 
 "More often than scientists would like to admit, they cannot even recover the data associated with their own published works." – Goodman et al. 2014
 
@@ -190,7 +190,7 @@ background-position: top 5% right 5%
 background-size: 10%
 
 # Goals for Today
-* Highlight a few data management and analysis problems that we have faced.
+* Highlight a few data management and analysis problems we have faced.
 * Illustrate one way to tackle the issues.
 * Get you thinking about your data flow and ways to improve.
 
@@ -210,7 +210,7 @@ class: inverse, middle, center
 And then selfishly, I want to generate discussion, learn from each other, and hopefully I discover from all of you how I can do things better. 
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which piece of the data flow process is the most problematic for you?
@@ -231,7 +231,7 @@ class: inverse, center, middle
 * Columbia River basin and PIT-tag data, or CWT data stored in the RMIS database, genetics data--often requires intimate knowledge of data repository and queries to get the right information you are looking for.
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which piece of the data flow process is the most problematic for you?
@@ -251,7 +251,7 @@ class: inverse, center, middle
 ???
 * In 2020, Bonneville Power Administration spent over 100 million on RME, and over half of that was spent on data collection.
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which piece of the data flow process is the most problematic for you?
@@ -272,7 +272,7 @@ class: inverse, center, middle
 Big data....PTAGIS data base contains over 
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which piece of the data flow process is the most problematic for you?
@@ -293,7 +293,7 @@ class: inverse, center, middle
 Returning back to the 80:20 problem I mentioned earlier, do you have enought time to adequatly focus on analysis and reporting?; 
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which piece of the data flow process is the most problematic for you?
@@ -619,7 +619,7 @@ load('./data/car_dat.rda')
 
 ```{r load_cuyem}
 library(cuyem)
-# Basic QA/QC and create valued-added fields
+# Basic QA/QC and create value-added fields
 cleaned_car <- clean_carcassData(car_dat)
 ```
 
@@ -936,16 +936,16 @@ background-size: 15%
 ]
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 ## MentiMeter Poll
 ### Which part of your research project takes the most time to complete?
 
-  * **Project Administration and Process** (e.g., planning, personnel, metadata documentation)
-  * **Budgeting and Contracting** (e.g., inventories, budget tracking, quarterly reports)
-  * **Data Management** (e.g., QA/QC, querying, summarizing)
-  * **Data Analysis and Hypothesis Testing** (e.g., defining and answering research questions)
-  * **Sharing Information and Publishing** (e.g., peer-reviewed, presentations, adaptive management)
+  * .yellow[**Project Administration and Process**] (e.g., planning, personnel, metadata documentation)
+  * .yellow[**Budgeting and Contracting**] (e.g., inventories, budget tracking, quarterly reports)
+  * .yellow[**Data Management**] (e.g., QA/QC, querying, summarizing)
+  * .yellow[**Data Analysis and Hypothesis Testing**] (e.g., defining and answering research questions)
+  * .yellow[**Sharing Information and Publishing**] (e.g., peer-reviewed, presentations, adaptive management)
   
 .center[
   <img src="figures/data_management_wordcloud.png"/>
@@ -957,7 +957,7 @@ class: inverse, center, middle
 .pull-left[
 * Data Management is a work in progress
 * 2020 - 1st year of implementation
-  _ Collaborative Project Reports
+  - Collaborative Project Reports
   - Focused on development
   - Required compromises and concessions
 * Currently - 2021
