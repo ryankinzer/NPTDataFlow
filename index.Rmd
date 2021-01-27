@@ -141,7 +141,7 @@ class: title-slide
 </div>  
 
 ???
-Thank you for joining us today.  I'm sure you are hear to see Dan's talk and were just unlucky to show up early.  
+Thank you for joining us today. And I'm under no delusion that you all showed up to hear my talk, I know you are here to listen to Dan, and were just unlucky and showed up early. But now that you are here, maybe you will find some of my topics interesting.  So as Russel stated, I will be talking about streamlining the data flow process,
 
 ---
 class: middle
@@ -156,7 +156,7 @@ background-size: 40%
 
 ???
 
-focusing on the flow of data. when you have it.
+and focusing on the areas between data collection to reporting, or in other words, when you have the data.
 
 ---
 class: mainslide
@@ -182,7 +182,9 @@ background-size: 100%
 ]
 
 ???
-These four quotes really resonated with me when I read them for the first time a few years ago, and how they pertained to my experiences working with various fish biologists over the years.  I won't read them exactly, but they will give you the reasons I'm moving forward in the way that I am, and that we will discuss today.
+These four quotes really set the stage, and what I would like you to think about for the rest of the talk, and why the staff within the Research Division of the Nez Perce Tribe's Department of Fisheries has started to develop and implement a data management strategy that tracks data through the process.  So I will touch on them briefly; 
+
+I'm sure we can all agree on the first one, bad data is a fool's investment. Science is hindered by the 80:20 problem, which basically means we spend 80% of our time completing the less influential tasks, and only 20% of our time working towards our main objectives. And from what I have observed in my career as a fisheries biologist, is that generally we spend the majority of their time organizing, QA/QC, and managing data, and only 20% of their time investigating patterns and learning from the data. Third quote, more than we want to admit we can't recover data or the methods used to produce our own work. So that is problematic from the purpose of the scientific methods, transparency and reproducibility.  And finally, we have a tremendous amount of ownership over the data we collect, but if its sitting on the shelf and not being used because because of other priorities, we are not working together to further science.    
 
 ---
 background-image: url('figures/NPTlogos2.png')
@@ -191,7 +193,7 @@ background-size: 10%
 
 # Goals for Today
 * Highlight a few data management and analysis problems we have faced.
-* Illustrate one way to tackle the issues.
+* Illustrate how we have chosen to tackle the issues.
 * Get you thinking about your data flow and ways to improve.
 
 .center[
@@ -207,12 +209,11 @@ class: inverse, middle, center
 
 ???
 
-And then selfishly, I want to generate discussion, learn from each other, and hopefully I discover from all of you how I can do things better. 
-
+And then selfishly, I want to generate discussion, learn from each other, and hopefully we all walk away with some information that can help us do our jobs better.
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
@@ -228,12 +229,12 @@ class: inverse, middle
 ]
 
 ???
-* Columbia River basin and PIT-tag data, or CWT data stored in the RMIS database, genetics data--often requires intimate knowledge of data repository and queries to get the right information you are looking for.
+* In the Columbia River basin we have fish data stored all over the place. Raw PIT-tag data is stored in the PTAGIS database, coded-wire-tag data is stored in the regional mark information systems database, adult weir and hatchery data is in the LSRCP database FINs, genetics data in FishGen, I can go on.  And each of these repositories often require an intimate knowledge of how to query and use the data that comes out.  Without that knowledge you run the risk of getting incorrect data and conclusions.
 
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
@@ -249,11 +250,12 @@ class: inverse, middle
 ]
 
 ???
-* In 2020, Bonneville Power Administration spent over 100 million on RME, and over half of that was spent on data collection.
+Is it preserving and protecting the data.  In 2020, Bonneville Power Administration spent over 120 million dollars on RME, and over half of that was spent on data collection. You don't have to be a mathematician to know that over the life of salmon and steelhead reserach in the Columbia basin we have spent billions of dollars collecting data. Where is it?  If there was a fire in your building would the data from 30 years ago be safe?   
+
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
@@ -269,12 +271,12 @@ class: inverse, middle
 ]
 
 ???
-Big data....PTAGIS data base contains over 
+What about summarizing and analyzing data.  Just like the rest of the industries across the world, in fisheries, we are now collecting "big data". As in example our staff are often downloading data from PTAGIS that Excel can no-longer handle efficiently. And people can no longer comb through every row looking for errors, or to add up different groups of fish. And we are starting to use machine-learning algorithms to help us understand patterns in the data.  
 
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
@@ -290,12 +292,12 @@ class: inverse, middle
 ]
 
 ???
-Returning back to the 80:20 problem I mentioned earlier, do you have enought time to adequatly focus on analysis and reporting?; 
+Returning back to the 80:20 problem that I mentioned earlier, are you spending enough time investigating the questions of the day and reporting on your findings to improve fish management and recovery, or do you increasing get pulled away to less important areas.
 
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which piece of the data flow process is the most problematic for you?
 
 .pull-left[
@@ -313,43 +315,27 @@ class: inverse, middle
 <a href="https://www.menti.com/eirgddtvad">https://www.menti.com/eirgddtvad</a>
 
 ???
-What about getting your results noticed and used, to support informed decision making? Do the decision makers actually look at and use your reports and findings?
+And finally, how about getting your results noticed and actually used. Do you have trouble putting your information in front of the right people to support informed decision making?
 
+So, Amy has dropped this link in the chat windown and you can go click the answer that best describes your situation.
 ---
+
+## Audience Interaction
 
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/embed/c1b1cea343c68eaa661412bde8e8cedf/b0e1bf101754' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
 ---
-background-image: url('figures/NPTlogos2.png')
-background-position: top 5% right 5%
-background-size: 10%
+class: inverse, middle, center
 
-# Presentation Outline
-* DFRM Research Division and RME Background
-* Data Management and Analysis Problems
-* Data Strategy and Vision
-* Example: Natural-origin Spawner Abundance
+# Background
 
-.center[
-<img src="figures/stopconfusingmewithfacts.jpg"/>
-]
-
-???
-
-The big deal is not just having the data, but being able to quickly and efficiently access needed data.
-Ensure high quality results
-
-Data Management Maturity Model
-
-What is the Data Science Process
-  
 ---
 class: middle
 background-image: url('figures/NPTlogos2.png')
 background-position: top 5% right 5%
 background-size: 10%
 
-### DFRM RME Background
+### DFRM Research Division
 
 .left-column[
 **Four Office Locations**
@@ -370,8 +356,7 @@ background-size: 10%
 ]
 
 ???
-
-Work almost exclusively in the Snake River Basin.
+The Nez Perce Tribe's main area of use historically is shown here within the blue line, Indian Claims Commission, which, as you can see, almost covers the entire Snake basin shown in grey. And because of this historical use, the Tribe's fisheries department is focused on collecting fish data and working with our co-managers to collaboratively manage fish populations across the entire basin. The points you see on the map show provide an example of the types of data we are collecting. And it should be known that this is not an inclusive list, but only shows the types of data we have managed to collate and pull into a standardized database, and you can see by the colors, its a lot of the same data types. 
 
 DFRM Research Division Background
 M&E for Hatchery Program Evaluations
@@ -395,13 +380,28 @@ Filled M&E Gaps for Key Populations
 class: inverse, middle, center
 # Problems
 
+???
+Because of the independent nature of the projects we began to see problems cropping up.  Simple things at first, slightly different data collecting protocols or different names for metrics. 
+
 ---
-class: middle
+class: bottom, center
 background-image: url("figures/spreadsheet.gif")
 background-position: top 50% left 50%
 background-size: 50%
 
 ???
+The first major problem...too many spreadsheets.  Each project had their own spreadsheets for raw data and calculated metrics, often there was different sheets for different years, and even different sheets for different project staff. 
+
+--
+"redd_data_1990.xlsx" </br>
+"redd_data_1990_10_8_91.xlsx" </br>
+"data_redd_v1_1990_1993.xlsx" </br>
+"redd_data_1990_final.xlsx" 
+
+???
+How many of you have seen file names like these? And what happens when that one person retires, who knew where all the data was located and which files to use? 
+
+
 # Problems we faced
 * Collecting and Accessing
   - Consistency
@@ -427,9 +427,7 @@ background-position: top 50% left 50%
 background-size: 100%
 
 ???
-Coordinated Assessments - Regional Databases
-How is this data being rolled up across the landscape and being used to inform decisions?
-We saw this as a potential problem, and if we were facing it withing our own division, it would only get larger as you went across agencies and basins.
+Our next major problem was being unsure if calculated fish metrics across our various projects, and those that we used to manage fish, and to make adaptive management recommendations were actually "apples to apples" comparisons. Or if the differences we observed across programs were due to some underlying methodology or data type difference. And to be honest, because most of our program evaluations were independent of others, this was not a major concern, but it bacame a major concern when we were asked to submit data to a regional database with the purpose of comparing metrics across programs, agencies and the region. It was then, that we got really nervous about future analyses and interpretations.     
 
 ---
 class: middle
@@ -437,11 +435,18 @@ background-image: url("figures/drives.png")
 background-position: top 50% left 50%
 background-size: 75%
 
+???
+This slide is almost a duplicate of the previous spreadsheet slide, but it does touch on the "preserving and protecting data" problem that was in the earlier poll.  Our historical data was expensive to collect, and it was spread across multiple digital mediums that are getting increasing hard to recover if necessary. And I'm going to date myself a little, and say, that I have had to pull data from all of these types of storage devices in the past, but today I wouldn't be able to get data off any of these devices without contracting some outside source. So we know we had to pro-actively move this data into a storage repository that would be protected going forward.     
+
 ---
 class: middle
 background-image: url("figures/crossed-fingers.png")
 background-position: top 50% left 50%
 background-size: 75%
+
+???
+And whether we like to admit it or not, those types of problems will put you into this type of situation. Which none of us want.
+
 ---
 class: inverse, middle, center
 
@@ -454,8 +459,7 @@ class: inverse, left, middle
 <img src="figures/data_man_vision.png"/>
 
 ???
-Dreamt up a simple solution based on these four boxes.
-
+Awhile ago, we dreamt up a simple solution based on these four pieces. Data collection efforts needed to be standardized and consistent, the data would be stored in a single location, similar across all projects, and we would summarize and calculate metrics from that data in standardized and consistent approaches that would be ensured by using computer scripts. And in our case we decided to use R, becuase that was more attainable to us at the time. Obviously there are other programming languages capable of processing data.  And in some cases, we would need to pull data from external data sources. But using scripts for this part, we have confidence that our staff are getting the same and correct data back every time.
 ---
 
 class: inverse, left, top
@@ -472,7 +476,8 @@ Summaries and Analysis
 ]
 
 ???
-Introduce idea of tech teams
+Each part of this idea and data flow strategy is governed by our staff and by what we have coined as technical teams. Where each project has a representative to make sure items progress in a way that meet their needs, yet we focus, on finding consistencies across our programs. And together we document each data collection protocol and the methods used to calculate all the various fish metrics and high level indicators.
+
 ---
 class: inverse, right, middle
 
@@ -481,30 +486,14 @@ class: inverse, right, middle
 <img src="figures/data_flow.png"/>
 
 ???
+And this is how the system looks today. Our staff collect data, either on paper data sheets or on tablets and then the data is transferred to a storage repository that is maintained internally or one of the many external repositories used across the basin. To use the data, we have developed four R packages available on GitHub, where 'cdmsR' communicates with our internal database to pull data into the R environment, or push data back into the database, 'FisheR' is used to pull data from external locations, 'cuyem' houses the data summary and metric calculations, and finally, 'kus', which is an R Shiny application for displaying and sharing data with the public.  And I should metion, all of this fairly dynamic in the sense that we are actively tweaking the process, and revising code and scripts to make everything work more seamlessly.  So its not perfect, but when it comes to data management things rarely are we are just constantly trying to improve.
 
-Stacy Schumacher (CTUIR) Feb. 11th will focus on CDMS- so I encourage you to watch Stacy's talk if you are interested in the details of the database and how it functions. 
-
-# Current Staffing/Product Structure
-
-can we show tech teams and contributions?
-what about monitoring strategy?
-
-# Available Datasetsp
-
-# Data Maturity Model
-
-
-## All sounds great...but what are the problems now?
+And then last, if you are actually interested in the details of the CDMS database, Stacy Schumacher with the Confederated Tribes of the Umatilla Indian Reservation will present to this group on Feb. 11th, and will focus on CDMS specifically. Stacy's department and staff, and particularly a person named Ken Burcham was the main developer, so I will leave her to explain it in all the gory details.  
 
 ---
 class: inverse, middle, center
 
 # Example
-
-???
-Sp/Sm Chinook Salmon Female Proportion <br/> 
-Spring/summer Chinook Salmon Escapement <br/>
-Steelhead Juvenile Survival <br/>
 
 ---
 class: center, middle
@@ -566,14 +555,11 @@ $n_{s} =$  Spawned Carcasses<br/>
 ]
 
 ???
-*collection is electronic but offline due to our monitoring locations
-*so not exactly real-time....but close
-
-ETIS - Samantha Smith: Jan. 7th, 2021, Latest applications for handheld devices for field data collection 
+To calculate NOSA and the necessary metrics, we use data collected from spawning ground surveys, which last year we did for the first time with 100% electronic data capture using Survey123. And the collected data was migrated to CDMS once the tablets returned to the office and had a WiFI connection. The details of using Survey123 for our surveys was actually highlighted to this group a couple week ago, on Jan. 7th by Samantha Smith, so if you are interested in that talk please go to the ETIS webinar site and watch the video.  And we use adult weir data which is collected in the FINS offline application and later transferred to the FINS web application.  
 
 ---
 
-## Data Access
+## CDMS Data Access
 
 ```{r creds, echo = FALSE}
 username <- 'api_user'
@@ -586,12 +572,12 @@ password <- 'api_user'
 ```{r login, echo = TRUE, message = FALSE, results = 'hide'}
 library(tidyverse)
 library(cdmsR)
-cdmsLogin(username, password)
+cdmsLogin(username, password) #<<
 ```
 
 ```{r glimpse_datastores, eval=FALSE}
 # Check for available datasets
-glimpse(getDatastores())
+getDatastores()[,1:2]
 ```
 ]
 
@@ -608,11 +594,11 @@ glimpse(getDatastores())
 
 ---
 
-## Data Access
+## Carcass Data Access
 
 .pull-left[
 ```{r get_carcass2, eval = TRUE, cache=TRUE, cache.extra = file.mtime('./data/car_dat.rda')}
-#car_dat <- getDatasetView(datastoreID = 79)
+#car_dat <- getDatasetView(datastoreID = 79) #<<
 #save(car_dat, file = './data/car_dat.rda')
 load('./data/car_dat.rda')
 ```
@@ -620,7 +606,7 @@ load('./data/car_dat.rda')
 ```{r load_cuyem}
 library(cuyem)
 # Basic QA/QC and create value-added fields
-cleaned_car <- clean_carcassData(car_dat)
+cleaned_car <- clean_carcassData(car_dat) #<<
 ```
 
 .center[
@@ -637,7 +623,7 @@ glimpse(cleaned_car)
 ]
 
 ---
-## Weir Data Access: fisheR
+## Weir Data Access
 
 .pull-left[
 
@@ -646,16 +632,16 @@ library(fisheR)
 ```
 
 ```{r get_trap, cache=TRUE, cache.extra = file.mtime('./data/trap_dat_NPT.rda')}
-# trap_dat <- get_FINSdata(
-#   module = 'Trapping',
-#   scope = 'NPT',
-#   startDate = '01/01/1990',
-#   endDate = '12/31/2020'
+# trap_dat <- get_FINSdata( #<<
+#   module = 'Trapping', #<<
+#   scope = 'NPT', #<<
+#   startDate = '01/01/1990', #<<
+#   endDate = '12/31/2020' #<<
 # )
 
 #save(trap_dat, file = './data/trap_dat.rda')
 load('./data/trap_dat.rda')
-cleaned_trap <- clean_weirData(trap_dat)
+cleaned_trap <- clean_weirData(trap_dat) #<<
 ```
 
 .center[
@@ -679,10 +665,10 @@ background-size: 10%
 
 # Estimate Escapement
 ```{r estMR}
-MR_ests <- get_MRests(
-  cleaned_trap, cleaned_car,
-  species = 'Chinook',
-  alpha = 0.05)
+MR_ests <- get_MRests( #<<
+  cleaned_trap, cleaned_car, #<<
+  species = 'Chinook', #<<
+  alpha = 0.05) #<<
 ```
 
 .tiny[
@@ -707,11 +693,11 @@ pHOS <- cleaned_car %>%
     Origin %in% c('Natural', 'Hatchery'),
     AboveWeir == 'Yes'
   ) %>%
-  est_group_p(
-    .summary_var = Origin,
-    alpha = 0.05,
-    SurveyYear,
-    StreamName
+  est_group_p( #<<
+    .summary_var = Origin, #<<
+    alpha = 0.05, #<<
+    SurveyYear, #<<
+    StreamName #<<
   ) %>%
   rename_with(~paste0('pHOS_',.x), n:upr)
 ```
@@ -751,7 +737,7 @@ pPSM <- cleaned_car %>%
     AboveWeir == 'Yes'
   ) %>%
   est_group_p(
-    .summary_var = SpawnedOut,
+    .summary_var = SpawnedOut, #<<
     alpha = 0.05,
     SurveyYear,
     StreamName
@@ -801,7 +787,7 @@ NOSA <- left_join(
     by = c("SurveyYear", "StreamName")
   ) %>%
   mutate(
-    NOSA = N * (1-pHOS_p) * (1-pPSM_p)
+    NOSA = N * (1-pHOS_p) * (1-pPSM_p) #<<
   )
 ```
 
@@ -834,10 +820,10 @@ NOSA %>%
 .left-code[
 
 ```{r get_redd}
-#redd_dat <- getDatasetView(datastoreID = 78)
+#redd_dat <- getDatasetView(datastoreID = 78) #<<
 #save(redd_dat, file = './data/redd_dat.rda')
 load('./data/redd_dat.rda')
-cleaned_redd <- clean_reddData(redd_dat)
+cleaned_redd <- clean_reddData(redd_dat) #<<
 ```
 
 ```{r weir_disp, echo=FALSE}
@@ -872,9 +858,9 @@ MR_ests <- left_join(weir_disp, MR_ests, by = c('trap_year', 'stream', 'species'
 
 
 ```{r get_NOSA, warning=FALSE, message=FALSE}
-NOSA_ests <- get_NOSAests(cleaned_redd,
-                          cleaned_car,
-                          MR_ests
+NOSA_ests <- get_NOSAests(cleaned_redd, #<<
+                          cleaned_car, #<<
+                          MR_ests #<<
                           )
 ```
 
@@ -938,7 +924,7 @@ background-size: 15%
 ---
 class: inverse, middle
 
-## MentiMeter Poll
+## Audience Interaction
 ### Which part of your research project takes the most time to complete?
 
   * .yellow[**Project Administration and Process**] (e.g., planning, personnel, metadata documentation)
@@ -947,10 +933,14 @@ class: inverse, middle
   * .yellow[**Data Analysis and Hypothesis Testing**] (e.g., defining and answering research questions)
   * .yellow[**Sharing Information and Publishing**] (e.g., peer-reviewed, presentations, adaptive management)
   
-.center[
+.pull-left[
+<a href="https://www.menti.com/7y548m2t83">https://www.menti.com/7y548m2t83</a>
+   ]
+  
+.pull-right[
   <img src="figures/data_management_wordcloud.png"/>
 ]
-  
+ 
 ---
 # In Closing
 
@@ -971,6 +961,11 @@ class: inverse, middle
   <img src="figures/data.gif"/>
 ]
 ]
+
+---
+
+## Audience Interaction
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/embed/2881f8898b91dc1aebd3d1102aeb4d2b/05a040fa5b17' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
 ---
 class: inverse, bottom, left
