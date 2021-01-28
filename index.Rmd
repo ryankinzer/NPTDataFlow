@@ -866,15 +866,13 @@ NOSA_ests <- get_NOSAests(cleaned_redd, #<<
 
 ```{r NOSA_fig_2, fig.show = 'hide', echo = FALSE}
 NOSA_ests %>%
-  filter(POP_NAME %in% c('East Fork South Fork Salmon River',
-                         'Secesh River',
-                         'Lolo Creek')) %>%
+  filter(POP_NAME == 'East Fork South Fork Salmon River') %>%
   mutate(NOSAij_lwr = ifelse(NOSAij_lwr < 0, 0, NOSAij_lwr)) %>%
   ggplot(aes(x = SurveyYear, y = NOSAij)) +
   geom_ribbon(aes(ymin = NOSAij_lwr, ymax = NOSAij_upr), alpha = .5, colour = 'grey') +
   geom_line() +
   scale_y_continuous(limits = c(0,1200), expand = c(0,0)) +
-  facet_wrap(~POP_NAME, nrow = 2) +
+  facet_wrap(~POP_NAME) +
   labs(x = 'Survey Year',
        y = 'NOSAij') +
   theme_bw()
